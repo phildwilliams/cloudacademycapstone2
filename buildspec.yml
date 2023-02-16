@@ -11,7 +11,7 @@ phases:
     commands:
       - echo build Docker image on `date`
       - cd src
-      - docker build -t <image name>:latest .
+      - docker build -t phlw-todo:latest .
       - docker tag phlw-todo:latest phlw-c2:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2:latest
   post_build:
     commands:
