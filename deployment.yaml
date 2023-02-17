@@ -18,7 +18,7 @@ spec:
         app: phlw-c2-eks
     spec:
       containers:
-        - image: 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2:latest
+        - image: 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2-eks:latest
           imagePullPolicy: Always
           name: phlw-c2-eks
           ports:

@@ -25,8 +25,8 @@ phases:
       - docker build -t phlw-todo-eks .
   post_build:
     commands:
-      - docker tag phlw-todo-eks 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2:latest
-      - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2:latest
+      - docker tag phlw-todo-eks 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2-eks:latest
+      - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2-eks:latest
       - kubectl apply -f deployment.yaml
       - kubectl apply -f service.yaml
       - kubectl rollout restart -f deployment.yaml
