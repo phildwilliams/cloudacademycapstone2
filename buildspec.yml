@@ -22,10 +22,10 @@ phases:
       - $(aws ecr get-login --no-include-email --region us-west-2)
   build:
     commands:
-      - docker build -t phlw-todo .
+      - docker build -t phlw-todo-eks .
   post_build:
     commands:
-      - docker tag phlw-todo 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2:latest
+      - docker tag phlw-todo-eks 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2:latest
       - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2:latest
       - kubectl apply -f deployment.yaml
       - kubectl apply -f service.yaml
