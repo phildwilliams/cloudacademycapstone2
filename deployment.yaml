@@ -12,14 +12,14 @@ spec:
   selector:
     matchLabels:
       app: phlw-c2-eks
-    template:
-  metadata:
-    labels:
-      app: phlw-c2-eks
-  spec:
-    containers:
-      - image: 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2:latest
-        imagePullPolicy: Always
-        name: phlw-c2-eks
-        ports:
-        - containerPort: 3001
+  template:
+    metadata:
+      labels:
+        app: phlw-c2-eks
+    spec:
+      containers:
+        - image: 962804699607.dkr.ecr.us-west-2.amazonaws.com/phlw-c2:latest
+          imagePullPolicy: Always
+          name: phlw-c2-eks
+          ports:
+          - containerPort: 3001
